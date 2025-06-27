@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Healthy Bites</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: #fffef9;
+    color: #333;
+  }
+  header {
+    background: #4caf50;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  nav {
+    margin-top: 15px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 600;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section {
+    margin-bottom: 60px;
+  }
+  h2 {
+    color: #388e3c;
+    margin-bottom: 18px;
+  }
+  .product-list {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-item {
+    background: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    padding: 18px;
+    border-radius: 10px;
+    flex: 1 1 280px;
+    text-align: center;
+  }
+  .product-item h3 {
+    margin-top: 0;
+    color: #2e7d32;
+  }
+  .product-item p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  form label {
+    display: block;
+    margin: 12px 0 5px;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 9px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form button {
+    margin-top: 18px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  form button:hover {
+    background: #388e3c;
+  }
+  footer {
+    text-align: center;
+    padding: 18px;
+    background: #2e7d32;
+    color: white;
+  }
+  footer p {
+    margin: 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Healthy Bites</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home">
+    <h2>Welcome to Healthy Bites</h2>
+    <p>Delicious, nutritious homemade snacks made with love — perfect for your busy and healthy lifestyle.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Healthy Bites was born from a passion for tasty and wholesome snacks. We use only natural ingredients, no preservatives, and lots of care to make your snack time guilt-free and enjoyable.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Snacks</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="Energy Balls" />
+        <h3>Energy Balls</h3>
+        <p>Sweet, chewy bites packed with nuts, seeds, and natural sweetness for a quick energy boost.</p>
+        <a href="#" style="display:inline-block; margin-top:10px; padding:10px 18px; background:#4caf50; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Buy Now</a>
+      </div>
+      <div class="product-item">
+        <img src="https://images.unsplash.com/photo-1563805042-7684bfb0f10e?auto=format&fit=crop&w=400&q=80" alt="Granola Bars" />
+        <h3>Homemade Granola Bars</h3>
+        <p>Crispy, crunchy bars with oats, honey, and dried fruits — perfect for on-the-go snacking.</p>
+        <a href="#" style="display:inline-block; margin-top:10px; padding:10px 18px; background:#4caf50; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Buy Now</a>
+      </div>
+      <div class="product-item">
+        <img src="https://images.unsplash.com/photo-1510626176961-4b94bb2bfb9c?auto=format&fit=crop&w=400&q=80" alt="Dried Fruit Mix" />
+        <h3>Dried Fruit Mix</h3>
+        <p>A colorful blend of dried mango, pineapple, and berries to satisfy your sweet tooth naturally.</p>
+        <a href="#" style="display:inline-block; margin-top:10px; padding:10px 18px; background:#4caf50; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return submitForm(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formStatus" style="color: green; display:none; margin-top:10px;">Thank you! We'll get back to you soon.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Healthy Bites. All rights reserved.</p>
+  <p><em>Mihle Dimba – Entrepreneur</em></p>
+</footer>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formStatus').style.display = 'block';
+    return false;
+  }
+</script>
+
+</body>
+</html>
+- [ ] 
